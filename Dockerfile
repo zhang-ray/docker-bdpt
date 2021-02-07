@@ -1,8 +1,8 @@
 FROM ubuntu:20.04
 
 RUN apt update -y
-RUN apt install software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt install -y software-properties-common
+RUN add-apt-repository -y ppa:deadsnakes/ppa
 RUN apt update -y
 RUN apt install -y python3.7 python3.7-pip git tree libfreetype6-dev libpng-dev
 RUN which python3
