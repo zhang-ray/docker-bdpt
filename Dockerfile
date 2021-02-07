@@ -1,7 +1,8 @@
-FROM openjdk:20.04
+FROM ubuntu:20.04
 
-RUN python --version
+RUN which python3
+RUN python3 --version
 RUN git clone https://github.com/bytedance/piano_transcription
-RUN pip install piano_transcription_inference
+RUN pip3 install piano_transcription_inference
 RUN cd piano_transcription
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
