@@ -4,7 +4,7 @@ RUN apt update -y
 RUN apt install -y software-properties-common
 RUN add-apt-repository -y ppa:deadsnakes/ppa
 RUN apt update -y
-RUN apt install -y python3.7 python3.7-distutils git tree libfreetype6-dev libpng-dev curl wget ffmpeg
+RUN apt install -y python3.7 python3.7-distutils git tree libfreetype6-dev libpng-dev curl wget ffmpeg vim 
 RUN which python3.7 && python3.7 --version
 RUN curl https://bootstrap.pypa.io/get-pip.py -o /root/get-pip.py && python3.7 /root/get-pip.py
 RUN pip3.7 install piano_transcription_inference torch
